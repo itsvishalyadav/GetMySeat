@@ -1,51 +1,65 @@
-# 🎬 Movie Ticket Booking Site
+# GetMySeat
 
-A sleek, responsive web application for browsing movies and booking tickets in real-time. Built with **React.js**.
+## Project Overview
+GetMySeat is a web application designed to simplify the process of booking and managing seating arrangements. The platform offers a user-friendly interface that allows users to find and reserve seats with ease.
 
----
+## Features
+- **Real-time Seat Availability**: Users can view live seat availability in various locations.
+- **User Accounts**: Personalized experience through user accounts for managing bookings.
+- **Admin Dashboard**: Admins can manage seat listings, view booking statistics, and handle user inquiries.
+- **Multi-Platform Support**: Accessible from both desktop and mobile devices.
 
-## 🚀 Features
+## Tech Stack
+- **Frontend**: React, Redux, Bootstrap
+- **Backend**: Node.js, Express
+- **Database**: MongoDB
+- **Deployment**: Heroku, AWS
 
-✅ Browse movie details (title, genre, runtime, language)  
-✅ Interactive buttons for watching trailers and booking tickets  
-✅ Smooth background gradients and responsive design  
-✅ Dynamic styling and component-based architecture  
-✅ Modern UI with glowing buttons and animations  
-
----
-
-## 🛠️ Tech Stack
-
-- **Frontend:** React.js, CSS (custom styles, gradients, responsive units)
-- **Version Control:** Git & GitHub
-
----
-
-## 📸 Screenshots
-
-*(Add screenshots here once deployed)*
-
----
-
-
-## 🚀 Getting Started
-
-### 📦 Installation
-
-1. **Clone the repository**
-
+## Installation
+1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/Movie-Ticket-Booking-Site.git
-   cd Movie-Ticket-Booking-Site
+   git clone https://github.com/itsvishalyadav/GetMySeat.git
+   cd GetMySeat
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the application:
+   ```bash
+   npm start
    ```
 
-2. **Install dependencies**
+## Usage
+- To access the application, open your web browser and navigate to `http://localhost:3000`.
+- Create an account or log in to start booking.
+- Follow the on-screen instructions to find and reserve your seat.
 
-    ```bash
-    npm install
-    ```
-3. **Start the development server**
+## Project Structure
+```
+GetMySeat/
+├── client/          # Frontend application
+├── server/          # Backend application
+├── package.json     # Project dependencies
+└── README.md        # Project overview
+```
 
-    ```bash
-    npm run dev
-    ```
+## Contribution Guidelines
+1. Fork the repository.
+2. Create your feature branch:
+   ```bash
+   git checkout -b feature/YourFeature
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m 'Add some feature'
+   ```
+4. Push to the branch:
+   ```bash
+   git push origin feature/YourFeature
+   ```
+5. Open a pull request.
+
+---
+
+Feel free to reach out with any questions or suggestions!
