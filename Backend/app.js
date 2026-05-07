@@ -84,8 +84,7 @@ const { Server } = require("socket.io");
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "https://getmyseat.onrender.com",
-    methods: ["GET", "POST"],
+    origin: process.env.FRONTEND_URL,
     credentials: true,
   },
 });
@@ -103,7 +102,6 @@ main()
 
 const sessionOptions = {
   secret: "mysecretkey",
-  store: MongoStore.create({ mongoUrl }),
   resave: false,
   saveUninitialized: true,
   cookie: {
@@ -136,11 +134,12 @@ const sendVerificationCode = async (email, verificationCode) => {
   console.log("Message sent:", info.messageId);
 };
 
+app.set("trust proxy", 1);
 app.use(session(sessionOptions));
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://getmyseat.onrender.com",
+    origin: process.env.FRONTEND_URL,
     credentials: true,
   })
 );
@@ -821,7 +820,7 @@ app.get(
   "/api/shows/:city/:title/:date",
   wrapAsync(async (req, res) => {
     const { city, title, date } = req.params;
-    const range = getISTDayRangeFromFormattedDate(date, 2025);
+    const range = getISTDayRangeFromFormattedDate(date, 2026);
 
     const shows = await Show.find({
       startTime: { $gte: range.startUnix, $lte: range.endUnix },
